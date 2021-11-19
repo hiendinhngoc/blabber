@@ -10,4 +10,5 @@
   <%= turbo_frame_tag 'posts' do%>
     <%= render @posts%>
   <% end %>
+  <%= button_to "logout", destroy_user_session_path, method: :delete  %>
 </div>

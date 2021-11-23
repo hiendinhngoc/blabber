@@ -10,5 +10,8 @@
   <%= turbo_frame_tag 'posts' do%>
     <%= render @posts%>
   <% end %>
-  <%= button_to "logout", destroy_user_session_path, method: :delete  %>
+
+  <%= button_to destroy_user_session_path, method: :delete, form: { "data-turbo" => "false" }, class: "btn btn-secondary" do %>
+    Logout
+  <% end %>
 </div>
